@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iliana Flohr | Actor</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Link to external JavaScript handling interactive components -->
+    <script src="script.js" defer></script>
+    
+    <!-- Google Fonts for an artistic, editorial serif aesthetic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Link for Social Media Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Navigation (Sticky/Fixed Viewport Pinned) -->
+    <header>
+        <div class="logo">Iliana Flohr</div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#productions">Credits</a>
+            <a href="#pedagogy">Education Work</a>
+            <a href="#resume">Resume</a>
+            <a href="#contact">Contact</a>
+            
+            <!-- Header Social Icons -->
+            <span class="nav-socials">
+                <a href="https://www.instagram.com/ilianaflohr/" target="_blank" aria-label="Instagram" class="icon-link"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/ilianaflohr/" target="_blank" aria-label="LinkedIn" class="icon-link"><i class="fa-brands fa-linkedin-in"></i></a>
+            </span>
+        </nav>
+    </header>
+
+    <!-- Hero / Headshot Section -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="headshot-wrapper">
+                <img src="headshot.png" alt="Iliana Flohr Headshot" class="headshot">
+            </div>
+            <div class="hero-text">
+                <h1>Iliana Flohr</h1>
+                <p class="subtitle">Actor & Performer</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="content-section">
+        <div class="section-container">
+            <h2>About</h2>
+            <div class="about-content">
+                <p>I am a theater artist, actor, and researcher currently based between New York and Boston. My artistic focus bridges rigorous classical text work with dynamic contemporary physical performance. Deeply invested in the mechanics of storytelling, I split my academic and creative time studying English and Philosophy at Wellesley College while training and performing across the bridge as a dual-enrollment student at MIT.</p>
+                
+                <p>With a foundational background spanning over a dozen Shakespearean productions, my relationship with classical text is both analytical and deeply physical. Whether stepping into the psychological depths of <em>Hamlet</em>, exploring the comedic rhythms of Benvolio, or shaping original curricula to teach dramatic analysis to high school students, I view the stage as a vital space for philosophical inquiry and visceral human connection.</p>
+                
+                <p>This summer, I am further expanding my artistic toolkit by diving into intensive professional training at the Stella Adler Studio of Acting Summer Conservatory, alongside the Studio 2B Shakespeare Intensive under Patrick Page. I am driven by projects that demand fierce intellectual curiosity, sharp text analysis, and collaborative physical risk.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Productions Gallery Section -->
+    <section id="productions" class="content-section alternate-bg">
+        <div class="section-container">
+            <h2>Selected Credits</h2>
+            
+            <!-- Main Grid Container -->
+            <div class="production-grid">
+                
+                <!-- Clickable Card 1: Hamlet (MIT - Recent) -->
+                <div class="production-card clickable" onclick="openModal(this)" 
+                     data-title="Hamlet" 
+                     data-role="Hamlet (Also Assistant Stage Manager & Co-Producer)" 
+                     data-company="MIT Shakespeare Ensemble | Dir. Alex Leondedis (Spring 2026)"
+                     data-desc="A deeply psychological exploration of text and physical risk. This production allowed me to blend rigorous text analysis with intense staging, while simultaneously managing the physical build and production logistics as co-producer."
+                     data-media-list="p_hamlet2_image1.jpg,p_hamlet2_image2.jpeg,p_hamlet2_image3.jpeg,p_hamlet2_image4.jpeg">
+                    <div class="prod-info">
+                        <h3>Hamlet <span class="view-gallery-tag">+ View Media</span></h3>
+                        <p class="role">Hamlet (Also Assistant Stage Manager & Co-Producer)</p>
+                        <p class="company">MIT Shakespeare Ensemble (Spring 2026)</p>
+                    </div>
+                </div>
+
+                <!-- Clickable Card 2: Love's Labour's Lost -->
+                <div class="production-card clickable" onclick="openModal(this)" 
+                     data-title="Love's Labour's Lost" 
+                     data-role="Stage Manager & Co-Producer" 
+                     data-company="MIT Shakespeare Ensemble | Dir. Emily Thibodeau (Fall 2025)"
+                     data-desc="Managing and co-producing this production involved coordinating comprehensive schedules, technical cues, and acting resources, balancing administrative precision with the comedic rhythms of the piece."
+                     data-media-list="lll-1.png">
+                    <div class="prod-info">
+                        <h3>Love's Labour's Lost <span class="view-gallery-tag">+ View Media</span></h3>
+                        <p class="role">Stage Manager & Co-Producer</p>
+                        <p class="company">MIT Shakespeare Ensemble (Fall 2025)</p>
+                    </div>
+                </div>
+
+                <!-- Clickable Card 3: Romeo and Juliet -->
+                <div class="production-card clickable" onclick="openModal(this)" 
+                     data-title="Romeo and Juliet" 
+                     data-role="Benvolio" 
+                     data-company="Wellesley Shakespeare Society (Spring 2025)"
+                     data-desc="Exploring the physical pacing and grounded, loyal energy of Benvolio within an ensemble-driven classical setting."
+                     data-media-list="p_romeoandjuliet_image1.jpeg,p_romeoandjuliet_image2.jpeg,p_romeoandjuliet_image3.jpeg,p_romeoandjuliet_image4.jpeg">
+                    <div class="prod-info">
+                        <h3>Romeo and Juliet <span class="view-gallery-tag">+ View Media</span></h3>
+                        <p class="role">Benvolio</p>
+                        <p class="company">Wellesley Shakespeare Society (Spring 2025)</p>
+                    </div>
+                </div>
+
+                <!-- Clickable Card 4: Henry V -->
+                <div class="production-card clickable" onclick="openModal(this)" 
+                     data-title="Henry V" 
+                     data-role="Montjoy" 
+                     data-company="MIT Shakespeare Ensemble | Dir. Kate Pitt (Spring 2025)"
+                     data-desc="Delivering formal heraldry and structured status dynamics within historical text interpretation environments."
+                     data-media-list="p_henryv_video.mp4,p_henryv_image1.jpeg,p_henryv_image2.jpeg,p_henryv_image3.jpeg,p_henryv_image4.jpg">
+                    <div class="prod-info">
+                        <h3>Henry V <span class="view-gallery-tag">+ View Media</span></h3>
+                        <p class="role">Montjoy</p>
+                        <p class="company">MIT Shakespeare Ensemble (Spring 2025)</p>
+                    </div>
+                </div>
+
+                <!-- Clickable Card 5: Hamlet (AYS - Older) -->
+                <div class="production-card clickable" onclick="openModal(this)" 
+                     data-title="Hamlet" 
+                     data-role="Hamlet (1 out of 4 actors)" 
+                     data-company="American Youth Shakespeare | Dir. Bob Rumsby (September 2023)"
+                     data-desc="An innovative shared staging interpretation separating the mental complexities of Hamlet across distinct performing performers."
+                     data-media-list="p_hamlet1_image1.jpg,p_hamlet1_image2.jpg,p_hamlet1_image3.jpg,p_hamlet1_image4.jpg,p_hamlet1_image5.jpg">
+                    <div class="prod-info">
+                        <h3>Hamlet <span class="view-gallery-tag">+ View Media</span></h3>
+                        <p class="role">Hamlet (1 out of 4 actors)</p>
+                        <p class="company">American Youth Shakespeare (September 2023)</p>
+                    </div>
+                </div>
+
+                <!-- Clickable Card 6: A Midsummer Night's Dream -->
+                <div class="production-card clickable" onclick="openModal(this)" 
+                     data-title="A Midsummer Night's Dream" 
+                     data-role="Titania / Hippolyta" 
+                     data-company="American Youth Shakespeare | Dir. Bob Rumsby (May 2023)"
+                     data-desc="Exploring status, power, and distinct vocal shifts while handling dual casting roles across the court and the fairy realms."
+                     data-media-list="p_midsummer_video.MP4,p_midsummer_image1.jpeg">
+                    <div class="prod-info">
+                        <h3>A Midsummer Night's Dream <span class="view-gallery-tag">+ View Media</span></h3>
+                        <p class="role">Titania / Hippolyta</p>
+                        <p class="company">American Youth Shakespeare (May 2023)</p>
+                    </div>
+                </div>
+
+                <!-- Hidden Archive Container (Expands with Clean Flex Spacing) -->
+                <div id="more-productions" class="hidden-productions">
+                    
+                    <div class="production-card clickable" onclick="openModal(this)" 
+                         data-title="A Christmas Carol" 
+                         data-role="The Ghost of Christmas Past / Scrooge's Niece" 
+                         data-company="American Youth Shakespeare (Dec 2022)" 
+                         data-desc="Ensemble classical adaptation utilizing live harp accompaniment integration directly woven into dynamic stage transitions." 
+                         data-media-list="p_christmascarol_video.MP4,p_christmascarol_image1.jpeg">
+                        <div class="prod-info">
+                            <h3>A Christmas Carol <span class="view-gallery-tag">+ View Media</span></h3>
+                            <p class="role">The Ghost of Christmas Past, Scrooge’s Niece (Harp Accompaniment)</p>
+                            <p class="company">American Youth Shakespeare (December 2022)</p>
+                        </div>
+                    </div>
+
+                    <div class="production-card clickable" onclick="openModal(this)" 
+                         data-title="Much Ado About Nothing" 
+                         data-role="Margaret" 
+                         data-company="American Youth Shakespeare (Sept 2022)" 
+                         data-desc="Rhythmic comedic timing delivery alongside live harp staging score work." 
+                         data-media-list="p_muchado_image1.jpeg,p_muchado_image2.jpeg,p_muchado_image3.JPG,p_muchado_image4.jpeg">
+                        <div class="prod-info">
+                            <h3>Much Ado About Nothing <span class="view-gallery-tag">+ View Media</span></h3>
+                            <p class="role">Margaret (Harp Accompaniment)</p>
+                            <p class="company">American Youth Shakespeare (September 2022)</p>
+                        </div>
+                    </div>
+
+                    <div class="production-card clickable" onclick="openModal(this)" 
+                         data-title="Julius Caesar" 
+                         data-role="Portia / Lepidus / Servant" 
+                         data-company="American Youth Shakespeare (Apr 2022)" 
+                         data-desc="Staging complex emotional shifts within targeted dramatic text blocks." 
+                         data-media-list="p_juliuscaesar_image1.jpg,p_juliuscaesar_image2.jpg,p_juliuscaesar_image3.jpg,p_juliuscaesar_image4.jpg,p_juliuscaesar_image5.jpg,p_juliuscaesar_image6.jpg,p_juliuscaesar_image7.jpg,p_juliuscaesar_image8.jpg,p_juliuscaesar_image9.jpg">
+                        <div class="prod-info">
+                            <h3>Julius Caesar <span class="view-gallery-tag">+ View Media</span></h3>
+                            <p class="role">Portia / Lepidus / Servant</p>
+                            <p class="company">American Youth Shakespeare (April 2022)</p>
+                        </div>
+                    </div>
+
+                    <div class="production-card clickable" onclick="openModal(this)" 
+                         data-title="The Tempest" 
+                         data-role="Iris" 
+                         data-company="American Youth Shakespeare (Apr 2019)" 
+                         data-desc="Classical verse and mythological character manifestation styling work." 
+                         data-media-list="p_tempest_image1.jpeg,p_tempest_image2.jpeg,p_tempest_image3.jpeg,p_tempest_image4.jpeg">
+                        <div class="prod-info">
+                            <h3>The Tempest <span class="view-gallery-tag">+ View Media</span></h3>
+                            <p class="role">Iris</p>
+                            <p class="company">American Youth Shakespeare (April 2019)</p>
+                        </div>
+                    </div>
+
+                    <div class="production-card clickable" onclick="openModal(this)" data-title="Twelfth Night" data-role="Fabian 2" data-company="American Youth Shakespeare (July 2017)" data-desc="Ensemble block pacing execution within early classical comedic structures." data-media-list="">
+                        <div class="prod-info">
+                            <h3>Twelfth Night <span class="view-gallery-tag">+ View Media</span></h3>
+                            <p class="role">Fabian 2</p>
+                            <p class="company">American Youth Shakespeare (July 2017)</p>
+                        </div>
+                    </div>
+
+                    <div class="production-card clickable" onclick="openModal(this)" data-title="Dear Mr. Shakespeare" data-role="Juliet / Chorus" data-company="American Youth Shakespeare (Sept 2017)" data-desc="A thematic collection of canonical classical scenes showcasing range in romantic verse and collaborative choruses." data-media-list="">
+                        <div class="prod-info">
+                            <h3>Dear Mr. Shakespeare (Scene Collection) <span class="view-gallery-tag">+ View Media</span></h3>
+                            <p class="role">Juliet / Chorus</p>
+                            <p class="company">American Youth Shakespeare (September 2017)</p>
+                        </div>
+                    </div>
+
+                    <div class="production-card clickable" onclick="openModal(this)" data-title="Macbeth" data-role="Menteith / Messenger" data-company="American Youth Shakespeare (Mar 2017)" data-desc="Atmospheric staging tracking rhythmic military storytelling structures." data-media-list="">
+                        <div class="prod-info">
+                            <h3>Macbeth <span class="view-gallery-tag">+ View Media</span></h3>
+                            <p class="role">Menteith / Messenger</p>
+                            <p class="company">American Youth Shakespeare (March 2017)</p>
+                        </div>
+                    </div>
+
+                    <div class="production-card clickable" onclick="openModal(this)" 
+                         data-title="A Comedy of Errors" 
+                         data-role="Chorus" 
+                         data-company="American Youth Shakespeare (Aug 2016)" 
+                         data-desc="High-energy physical theater performance tracking farcical plot complications." 
+                         data-media-list="p_comedyoferrors_image1.jpeg,p_comedyoferrors_image2.jpg">
+                        <div class="prod-info">
+                            <h3>A Comedy of Errors <span class="view-gallery-tag">+ View Media</span></h3>
+                            <p class="role">Chorus</p>
+                            <p class="company">American Youth Shakespeare (August 2016)</p>
+                        </div>
+                    </div>
+
+                    <div class="production-card clickable" onclick="openModal(this)" data-title="A Christmas Carol" data-role="Little Fan / Want / Cratchit Child" data-company="American Youth Shakespeare (Dec 2016)" data-desc="Character work tracking quick costume and atmospheric physical transitions." data-media-list="">
+                        <div class="prod-info">
+                            <h3>A Christmas Carol <span class="view-gallery-tag">+ View Media</span></h3>
+                            <p class="role">Little Fan / Want / Cratchit Child</p>
+                            <p class="company">American Youth Shakespeare (December 2016)</p>
+                        </div>
+                    </div>
+
+                    <div class="production-card clickable" onclick="openModal(this)" 
+                         data-title="A Winter's Tale" 
+                         data-role="Time Speech Chorus Member" 
+                         data-company="American Youth Shakespeare (May 2016)" 
+                         data-desc="Choral performance delivering complex structural narrative bridges." 
+                         data-media-list="p_winterstale_image1.jpeg">
+                        <div class="prod-info">
+                            <h3>A Winter's Tale <span class="view-gallery-tag">+ View Media</span></h3>
+                            <p class="role">Time Speech Chorus Member</p>
+                            <p class="company">American Youth Shakespeare (May 2016)</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Expand/Collapse Trigger Button -->
+            <div class="center-btn-container">
+                <button id="toggle-productions-btn" class="cta-button secondary-btn" onclick="toggleProductions()">Show Full History</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education, Teaching & Pedagogy Section -->
+    <section id="pedagogy" class="content-section">
+        <div class="section-container">
+            <h2>Teaching & Pedagogy</h2>
+            <div class="pedagogy-container">
+                
+                <div class="pedagogy-item">
+                    <div class="pedagogy-header">
+                        <h3>Solo Instructor & TA</h3>
+                        <span class="pedagogy-date">Feb 2026 – Present</span>
+                    </div>
+                    <p class="pedagogy-location">High School Studies Program (HSSP), MIT Educational Studies Program</p>
+                    <p class="pedagogy-body">Designed and executed a specialized, standalone 6-week "Introduction to Acting" curriculum entirely framed around structural exploration of <em>Hamlet</em> for 15 students. Actively evaluate student engagement metrics while managing collaborative class dynamics and structural textual scene study workshops.</p>
+                </div>
+
+                <div class="pedagogy-item">
+                    <div class="pedagogy-header">
+                        <h3>English Assistant Teacher</h3>
+                        <span class="pedagogy-date">Jan 2024 – Mar 2024</span>
+                    </div>
+                    <p class="pedagogy-location">Capstone Program, Khan Lab School</p>
+                    <p class="pedagogy-body">Developed a comprehensive 10-week creative drama course tailored for high school seniors. Built custom project-based performance rubrics and comprehensive lesson assignments. Authored an extensive 30+ page academic research analysis addressing structural pedagogical frameworks to successfully engage graduating seniors through <em>Hamlet</em> text analysis.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="content-section alternate-bg">
+        <div class="section-container">
+            <h2>Resume & Skills</h2>
+            <div class="resume-intro">
+                <p><strong>Education & Training:</strong> Wellesley College & MIT Dual Enrollment. Classical performance, text work, and staging focus under Diana Henderson and Jay Scheib. Extensive preparation in LAMDA Level 3 frameworks (Solo Shakespeare Focus).</p>
+                <p style="margin-top: 0.5rem; margin-bottom: 2rem;"><strong>Special Skills:</strong> Stage combat, Harp accompaniment, Choral singing, Set construction, Stage management, Theatre production management, Intermediate Spanish.</p>
+            </div>
+            <a href="resume.pdf" target="_blank" class="cta-button">Download Full Performance CV (PDF)</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="content-section">
+        <div class="section-container">
+            <h2>Contact</h2>
+            <div class="contact-box">
+                <p>For casting inquiries, industry collaborations, or full production histories, please reach out directly:</p>
+                <a href="mailto:ilianaflohr@gmail.com" class="email-link">ilianaflohr@gmail.com</a>
+                
+                <div class="contact-socials">
+                    <a href="https://www.instagram.com/ilianaflohr/" target="_blank" class="social-badge"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                    <a href="https://www.linkedin.com/in/ilianaflohr/" target="_blank" class="social-badge"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE REUSABLE POP-UP MODAL FRAME -->
+    <div id="production-modal" class="modal-overlay" onclick="closeModalOnOutsideClick(event)">
+        <div class="modal-window">
+            <button class="modal-close-btn" onclick="closeModal()">&times;</button>
+            
+            <div class="modal-layout">
+                <!-- Media Area (Left Side) -->
+                <div class="modal-media-pane">
+                    <!-- Native Video Player Slot -->
+                    <div id="modal-video-wrapper" class="video-container hidden">
+                        <video id="modal-video" controls playsinline>
+                            <source src="" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <!-- Embed Box for YouTube/Vimeo links if added later -->
+                    <div id="modal-embed-wrapper" class="video-container hidden">
+                        <iframe id="modal-embed" src="" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <!-- Dynamic Multi-Image Gallery Sheet -->
+                    <div id="modal-gallery" class="modal-images-grid"></div>
+                </div>
+                
+                <!-- Text Area (Right Side) -->
+                <div class="modal-text-pane">
+                    <h2 id="modal-title">Production Title</h2>
+                    <p id="modal-role" class="modal-role-sub">Role</p>
+                    <p id="modal-company" class="modal-company-sub">Company</p>
+                    <hr class="modal-divider">
+                    <p id="modal-description">Detailed description or artistic reflection goes here.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Iliana Flohr. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

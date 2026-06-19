@@ -1,0 +1,598 @@
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #2c2c2c;
+    background-color: #faf9f6; /* Soft elegant off-white */
+    line-height: 1.6;
+}
+
+/* Header & Nav (Sticky/Fixed Configuration) */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 4rem;
+    position: fixed; /* Pins header to top of viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100; /* Keeps nav floating cleanly over background text */
+    background-color: rgba(250, 249, 246, 0.85); /* Semi-transparent off-white match */
+    backdrop-filter: blur(10px); /* Artistic glassmorphism effect */
+    border-bottom: 1px solid rgba(234, 222, 204, 0.4);
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #2c2c2c;
+    margin-left: 2.5rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #8c7863; /* Subtle artistic bronze accent */
+}
+
+/* Nav Social Wrapper */
+.nav-socials {
+    display: flex;
+    align-items: center;
+    margin-left: 1.5rem;
+    border-left: 1px solid #dcdad4;
+    padding-left: 1rem;
+}
+
+.nav-socials .icon-link {
+    margin-left: 1.2rem;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.nav-socials .icon-link:hover {
+    color: #8c7863;
+}
+
+/* Adjusting Hero spacing to compensate for the fixed header height */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8rem 2rem 2rem 2rem; 
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    max-width: 1100px;
+    width: 100%;
+    gap: 4rem;
+}
+
+.headshot-wrapper {
+    flex: 1;
+    max-width: 450px;
+}
+
+.headshot {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    line-height: 1.1;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #8c7863;
+}
+
+/* Sections Structure */
+.content-section {
+    padding: 7rem 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.alternate-bg {
+    background-color: #f2f0eb; /* Slightly darker shift for structure */
+}
+
+.section-container {
+    max-width: 900px;
+    width: 100%;
+}
+
+.content-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+/* About Content */
+.about-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #4a4a4a;
+    max-width: 750px;
+}
+
+/* Production Grid */
+.production-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.production-card {
+    background: #faf9f6;
+    padding: 2rem;
+    border-left: 3px solid #8c7863;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+}
+
+.production-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.role {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 0.25rem;
+}
+
+.company {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #888;
+}
+
+/* Resume Section Details */
+.resume-intro {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    border: 1px solid #2c2c2c;
+    color: #2c2c2c;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #2c2c2c;
+    color: #faf9f6;
+}
+
+/* Contact Details */
+.contact-box {
+    font-size: 1.1rem;
+}
+
+.email-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #2c2c2c;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.email-link:hover {
+    color: #8c7863;
+}
+
+.contact-socials {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.social-badge {
+    text-decoration: none;
+    color: #555;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+}
+
+.social-badge:hover {
+    color: #8c7863;
+    border-bottom: 1px solid #8c7863;
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    padding: 3rem 2rem;
+    font-size: 0.85rem;
+    color: #888;
+    background-color: #faf9f6;
+    border-top: 1px solid #eadecc;
+}
+
+/* Responsive Scaling for Mobile Screens */
+@media (max-width: 768px) {
+    header {
+        padding: 1.5rem 2rem;
+        flex-direction: column;
+        gap: 1rem;
+        position: relative;
+    }
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    nav a {
+        margin-left: 0;
+        margin: 0 0.75rem;
+    }
+    .nav-socials {
+        margin-left: 0;
+        border-left: none;
+        padding-left: 0;
+        width: 100%;
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+    .nav-socials .icon-link {
+        margin: 0 1rem;
+    }
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+    .hero-text h1 {
+        font-size: 2.8rem;
+    }
+    .content-section {
+        padding: 4rem 1.5rem;
+    }
+    .email-link {
+        font-size: 1.5rem;
+    }
+    .contact-socials {
+        justify-content: center;
+    }
+}
+
+/* Expandable Production Layouts */
+.hidden-productions {
+    display: none;
+    /* Forces the nested cards to space out identically to the main grid */
+    flex-direction: column;
+    gap: 1.5rem; 
+    width: 100%;
+}
+
+.center-btn-container {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.secondary-btn {
+    background: transparent;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* Pedagogy / Education Items styling */
+.pedagogy-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.pedagogy-item {
+    border-bottom: 1px solid #eadecc;
+    padding-bottom: 2.5rem;
+}
+
+.pedagogy-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.pedagogy-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.25rem;
+}
+
+.pedagogy-header h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.pedagogy-date {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #8c7863;
+}
+
+.pedagogy-location {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.pedagogy-body {
+    color: #4a4a4a;
+    font-size: 1.05rem;
+    max-width: 800px;
+}
+
+@media (max-width: 768px) {
+    .pedagogy-header {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+}
+
+/* Clickable Production Cards */
+.production-card.clickable {
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.production-card.clickable:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+}
+
+.view-gallery-tag {
+    font-size: 0.8rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #8c7863;
+    margin-left: 1rem;
+    font-weight: 400;
+    opacity: 0.7;
+}
+
+/* Modal Overlay Styling */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(44, 44, 44, 0.6); /* Soft dark dim */
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    display: none; /* Hidden by default */
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+    display: flex;
+    opacity: 1;
+}
+
+/* Modal Window Content Container */
+.modal-window {
+    background-color: #faf9f6;
+    max-width: 1000px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+    padding: 3rem;
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    color: #2c2c2c;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s ease;
+}
+
+.modal-close-btn:hover {
+    color: #8c7863;
+}
+
+/* Side-by-Side Flex Layout */
+.modal-layout {
+    display: flex;
+    gap: 3rem;
+    margin-top: 1rem;
+}
+
+/* Media Gallery Pane Frame Restraints */
+.modal-media-pane {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-height: 75vh; /* Prevents media from pushing past text block */
+    overflow-y: auto; /* Adds a clean internal scrollbar just for media if there are many files */
+    padding-right: 0.5rem;
+}
+
+/* Photo Sizing Bounds */
+.modal-photo {
+    width: 100%;
+    max-height: 500px; /* Restricts giant images from scaling up too far */
+    object-fit: contain; /* Keeps original aspect ratio intact without cropping */
+    background-color: #f2f0eb; /* Subtle framing background for transparent or slim images */
+    display: block;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Custom internal scrollbar track for a cleaner look */
+.modal-media-pane::-webkit-scrollbar {
+    width: 4px;
+}
+.modal-media-pane::-webkit-scrollbar-thumb {
+    background: #eadecc;
+    border-radius: 4px;
+}
+
+.modal-text-pane {
+    flex: 1;
+}
+
+/* Video Container and Frame Bounds */
+.video-container {
+    position: relative;
+    width: 100%;
+    max-height: 500px; /* Perfectly matches your photo bounds */
+    background-color: #000; /* Crisp black cinematic framing borders */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    margin-bottom: 1.5rem;
+}
+
+/* Constrain native MP4 video tags inside the pane */
+.modal-media-pane video {
+    width: 100%;
+    max-height: 500px;
+    display: block;
+    object-fit: contain; /* Keeps widescreen 16:9 ratios from distorting */
+}
+
+/* Constrain streaming iframe embeds (YouTube/Vimeo) safely */
+.video-container iframe {
+    width: 100%;
+    height: 280px; /* Standard responsive height for embedded players inside a pane */
+    display: block;
+    border: none;
+}
+
+/* Image formatting */
+.modal-photo {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.modal-images-grid {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Text Element Designations */
+#modal-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.modal-role-sub {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #555;
+    margin-top: 0.25rem;
+}
+
+.modal-company-sub {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #888;
+    margin-top: 0.25rem;
+}
+
+.modal-divider {
+    border: none;
+    border-top: 1px solid #eadecc;
+    margin: 1.5rem 0;
+}
+
+#modal-description {
+    font-size: 1.05rem;
+    color: #4a4a4a;
+    line-height: 1.6;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Responsive Handling */
+@media (max-width: 850px) {
+    .modal-layout {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .modal-window {
+        padding: 2rem;
+        max-height: 90vh;
+    }
+}
