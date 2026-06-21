@@ -93,3 +93,4 @@ function closeModalOnOutsideClick(event) {
         closeModal();
     }
 }
+
